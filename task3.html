@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Interactive Webpage</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <ul id="menu">
+                <li><a href="#" onclick="showContent('home')">Home</a></li>
+                <li><a href="#" onclick="showContent('about')">About</a></li>
+                <li><a href="#" onclick="showContent('contact')">Contact</a></li>
+                <li><a href="#" onclick="showContent('dynamic')">Dynamic</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <section id="home" class="content-section">
+            <h1>Welcome to the Homepage</h1>
+            <p>This is the home section.</p>
+        </section>
+        <section id="about" class="content-section" style="display: none;">
+            <h1>About Us</h1>
+            <p>This is the about section.</p>
+        </section>
+        <section id="contact" class="content-section" style="display: none;">
+            <h1>Contact Us</h1>
+            <form id="contactForm" onsubmit="return validateForm()">
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name" required>
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
+                <label for="message">Message:</label>
+                <textarea id="message" name="message" required></textarea>
+                <button type="submit">Submit</button>
+            </form>
+        </section>
+        <section id="dynamic" class="content-section" style="display: none;">
+            <h1>Dynamic Content</h1>
+            <form id="dynamicForm" onsubmit="return addDynamicContent()">
+                <label for="dynamicInput">Enter something:</label>
+                <input type="text" id="dynamicInput" name="dynamicInput" required>
+                <button type="submit">Add</button>
+            </form>
+            <div id="dynamicContent"></div>
+        </section>
+    </main>
+    <script src="scripts.js"></script>
+</body>
+</html>
