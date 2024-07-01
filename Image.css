@@ -1,0 +1,17 @@
+/* src/components/Image.css */
+.image-container {
+    cursor: pointer;
+  }
+  
+  .image {
+    width: 100%;
+    height: auto;
+    display: block;
+    border-radius: 8px;
+    transition: transform 0.2s;
+  }
+  
+  .image:hover {
+    transform: scale(1.05);
+  }
+  
